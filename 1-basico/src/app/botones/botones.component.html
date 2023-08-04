@@ -1,0 +1,37 @@
+<h3>2. Component Botones</h3>
+<div>
+    <button [class.disabled]="buttonDisabled" class="btn btn-danger" (click)="textColor= 'text-danger'">
+        Color Rojo
+    </button>
+    <button [class]="{'disabled': buttonDisabled}" class="btn btn-success mx-2" (click)="textColor= 'text-success'">
+        Color Verde
+    </button>
+    <button [ngClass]="{'disabled': buttonDisabled}" class="btn btn-primary" (click)="textColor= 'text-primary'">
+        Color Azul
+    </button>
+</div>
+<p [class]="textColor">Texto que va a cambiar de color</p>
+
+<button class="btn btn-secondary" (click)="buttonDisabled = !buttonDisabled">
+    Activar/Desactivar
+</button>
+<br><br>
+
+<div>
+    <button [disabled]="buttonDisabled" class="btn btn-success">Property Binding</button>
+</div>
+<br>
+
+<div>
+    <div>
+        <button class="btn btn-primary"
+            (click)="imagen = 'https://images.pexels.com/photos/1008000/pexels-photo-1008000.jpeg?auto=compress&cs=tinysrgb&w=600'">
+            Img 1
+        </button>
+        <button class="btn btn-danger"
+            (click)="imagen = 'https://images.pexels.com/photos/264172/pexels-photo-264172.jpeg?auto=compress&cs=tinysrgb&w=600'">
+            Img 2
+        </button>
+    </div>
+    <img [src]="imagen" alt="">
+</div>

@@ -1,0 +1,58 @@
+<h3>7. Formulario Basado en reactivos (formControl)</h3>
+<div>
+    <div class="card">
+        <div class="card-body">
+            <form [formGroup]="formUser" (ngSubmit)="handleSubmit()">
+                <div class="mb-2">
+                    <label class="form-label">Nombre</label>
+                    <!-- <input type="text" [formControl]="name" class="form-control"
+                        placeholder="Por favor ingrese su nombre" required> -->
+                    <!-- <div class="alert alert-danger mt-2" [hidden]="name.valid || name.pristine">
+                        El nombre es obligatorio
+                    </div> -->
+                    <input type="text" formControlName="name" class="form-control"
+                        placeholder="Por favor ingrese su nombre" required>
+                    <div class="alert alert-danger mt-2" [hidden]="name.valid || name.pristine">
+                        El nombre es obligatorio
+                    </div>
+                </div>
+                <div class="mb-2">
+                    <label class="form-label">Email</label>
+                    <!-- <input type="email" [formControl]="email" class="form-control"
+                        placeholder="Por favor ingrese su email" required> -->
+                    <!-- <div class="alert alert-danger mt-2" [hidden]="email.valid || email.pristine">
+                        <span *ngIf="email.errors?.['required']">
+                            El email es obligatorio
+                        </span>
+                        <span *ngIf="email.errors?.['email']">
+                            El email debe ser valido
+                        </span>
+                    </div> -->
+                    <input type="email" formControlName="email" class="form-control"
+                        placeholder="Por favor ingrese su email" required>
+                    <div class="alert alert-danger mt-2"
+                        [hidden]="formUser.get('email')?.valid || formUser.get('email')?.pristine">
+                        <span *ngIf="formUser.get('email')?.errors?.['required']">
+                            El email es obligatorio
+                        </span>
+                        <span *ngIf="formUser.get('email')?.errors?.['email']">
+                            El email debe ser valido
+                        </span>
+                    </div>
+                </div>
+                <!-- [disabled]="name.invalid || email.invalid" -->
+                <button class="btn btn-success" [disabled]="formUser.invalid">
+                    Enviar
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- {{ name.value }}
+{{ email.value }} -->
+
+<!-- {{ formUser.value | json }} -->
+
+{{ formUser.get('name')?.value }}
+{{ formUser.get('email')?.value }}

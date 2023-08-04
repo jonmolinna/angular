@@ -1,0 +1,43 @@
+<h3>6. Formulario Basado en Plantilla</h3>
+<div>
+    <div class="card">
+        <div class="card-body">
+            <form (ngSubmit)="handleSubmit()" #formContact="ngForm">
+                <div>
+                    <label class="form-label">Nombre:</label>
+                    <input type="text" name="name" class="form-control" placeholder="Ingrese Nombre" required
+                        [(ngModel)]="form.name" #name="ngModel">
+                    <div class="alert alert-danger mt-2" [hidden]="name.valid || name.pristine">
+                        El nombre es requerido
+                    </div>
+                </div>
+                <div class="mt-1">
+                    <label class="form-label">Edad:</label>
+                    <input type="number" name="age" class="form-control" placeholder="Ingrese Edad" required
+                        [(ngModel)]="form.age" #age="ngModel">
+                    <div class="alert alert-danger mt-2" [hidden]="age.valid || age.pristine">
+                        La Edad es requerido
+                    </div>
+                </div>
+                <button class="btn btn-primary mt-1" [disabled]="formContact.invalid">
+                    Enviar
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- 
+    ng-touched => si se realizo click en el input
+    ng-dirty => si se escribio algo en el input
+    ng-invalid => si se cumple con las validaciones
+
+    #age=" ngModel"=> es para acceder a los estados
+                    -->
+
+<!-- {{ form | json }} -->
+<!-- {{ name.errors | json }}
+{{ name.valid | json }} -->
+
+<!-- Formulario -->
+{{ formContact.valid }}

@@ -1,0 +1,17 @@
+<h3>5. Switch</h3>
+<div>
+    <div [ngSwitch]="dia">
+        <span *ngSwitchCase="1">Lunes</span>
+        <span *ngSwitchCase="2">Martes</span>
+        <span *ngSwitchCase="3">Miercoles</span>
+        <span *ngSwitchCase="4">Jueves</span>
+        <span *ngSwitchCase="5">Vieres</span>
+        <span *ngSwitchCase="6">Sabado</span>
+        <span *ngSwitchCase="7">Domingo</span>
+        <span *ngSwitchDefault>Valor no valido</span>
+    </div>
+    <div class="mt-1">
+        <button class="btn btn-success me-1" (click)="add()">+</button>
+        <button class="btn btn-success" (click)="restar()">-</button>
+    </div>
+</div>
