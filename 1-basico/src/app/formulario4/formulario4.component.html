@@ -1,0 +1,37 @@
+<h3>8. Formularios reactivos (FormBuilder)</h3>
+<div>
+    <div class="card">
+        <div class="card-body">
+            <form [formGroup]="formUser" (ngSubmit)="handleSubmit()">
+                <div class="mb-2">
+                    <label class="form-label">Nombre</label>
+                    <div>
+                        <input type="text" class="form-control" placeholder="Por favor ingrese su nombre"
+                            formControlName="name" required>
+                    </div>
+                    <div class="alert alert-danger mt-2" [hidden]="name.valid || name.pristine">
+                        El nombre es obligatorio
+                    </div>
+                </div>
+                <div class="mb-2">
+                    <label class="form-label">Email</label>
+                    <div>
+                        <input type=" email" formControlName="email" class="form-control"
+                            placeholder="Por favor ingrese su email" required>
+                    </div>
+                    <div class="alert alert-danger mt-2" [hidden]="email.valid || email.pristine">
+                        <span *ngIf="email.errors?.['required']">
+                            El email es obligatorio
+                        </span>
+                        <span *ngIf="email.errors?.['email']">
+                            El email debe ser valido
+                        </span>
+                    </div>
+                </div>
+                <button class="btn btn-success" [disabled]="formUser.invalid">
+                    Enviar
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
