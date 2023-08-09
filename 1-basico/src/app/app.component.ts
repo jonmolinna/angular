@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular Basico';
+  fullName: string = 'Kendra Contreras Saenz';
+  age: number = 27;
+  count: number = 0;
+
+  addCount() {
+    this.count = this.count + 1;
+  }
+  resCount() {
+    this.count = this.count - 1;
+  }
 }
