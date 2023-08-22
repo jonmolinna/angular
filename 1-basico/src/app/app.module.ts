@@ -17,6 +17,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Formulario3Component } from './formulario3/formulario3.component';
 import { Formulario4Component } from './formulario4/formulario4.component';
 import { ChildrenComponent } from './children/children.component';
+import { Children2Component } from './children2/children2.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { ChildrenComponent } from './children/children.component';
     Formulario3Component,
     Formulario4Component,
     ChildrenComponent,
+    Children2Component,
   ],
   imports: [BrowserModule, FormsModule, ReactiveFormsModule],
   providers: [],

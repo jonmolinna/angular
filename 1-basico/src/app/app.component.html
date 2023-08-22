@@ -17,11 +17,18 @@
     <hr>
     <app-formulario4></app-formulario4>
     <hr>
+    <p>Componente Padre</p>
     <div>
         <button class="btn btn-success" (click)="addCount()">+</button>
         <button class="btn btn-success" (click)="resCount()">-</button>
     </div>
     <app-children language="Angular" [fullName]="fullName" [age]="age" [count]="count"></app-children>
+    <hr>
+    <p>Componente Padre</p>
+    <div>
+        <p>Contado: {{ numero }}</p>
+    </div>
+    <app-children2 (sumNumberClick)="reciveNumber($event)"></app-children2>
 
     <br><br><br><br><br><br><br><br><br><br>
 </div>
