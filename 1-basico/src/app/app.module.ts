@@ -18,6 +18,9 @@ import { Formulario3Component } from './formulario3/formulario3.component';
 import { Formulario4Component } from './formulario4/formulario4.component';
 import { ChildrenComponent } from './children/children.component';
 import { Children2Component } from './children2/children2.component';
+import { MessagesComponent } from './messages/messages.component';
+import { MessageComponent } from './message/message.component';
+import { MessageAddComponent } from './message-add/message-add.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +35,9 @@ import { Children2Component } from './children2/children2.component';
     Formulario4Component,
     ChildrenComponent,
     Children2Component,
+    MessagesComponent,
+    MessageComponent,
+    MessageAddComponent,
   ],
   imports: [BrowserModule, FormsModule, ReactiveFormsModule],
   providers: [],
