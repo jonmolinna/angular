@@ -8,11 +8,21 @@ import { AboutComponent } from './about/about.component';
 
 import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { CoursesComponent } from './courses/courses.component';
+import { CoursesdetailComponent } from './coursesdetail/coursesdetail.component';
 
 const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
+  },
+  {
+    path: 'courses',
+    component: CoursesComponent,
+  },
+  {
+    path: 'courses/:course',
+    component: CoursesdetailComponent,
   },
   {
     path: 'contact',
@@ -40,6 +50,8 @@ const routes: Routes = [
     ContactComponent,
     AboutComponent,
     PageNotFoundComponent,
+    CoursesComponent,
+    CoursesdetailComponent,
   ],
   imports: [BrowserModule, RouterModule.forRoot(routes)],
   providers: [],
