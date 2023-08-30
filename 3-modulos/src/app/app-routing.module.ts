@@ -2,13 +2,18 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { RouterModule, Routes } from '@angular/router';
-// import { HomeComponent } from './welcome/home/home.component';
 
 const routes: Routes = [
-  // {
-  //   path: '',
-  //   component: HomeComponent,
-  // },
+  {
+    path: '',
+    loadChildren: () =>
+      import('./welcome/welcome.module').then((m) => m.WelcomeModule),
+  },
+  {
+    path: 'courses',
+    loadChildren: () =>
+      import('./courses/courses.module').then((m) => m.CoursesModule),
+  },
 ];
 
 @NgModule({
