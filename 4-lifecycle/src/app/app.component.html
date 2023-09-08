@@ -1,0 +1,16 @@
+<h2>Ciclo de vida de un componente</h2>
+<div>
+  <div>
+    <h3>1. On Changes</h3>
+    <input type="text" [(ngModel)]="name">
+    <br>
+    <br>
+    Historial
+    <app-ng-on-changes [name]="name"></app-ng-on-changes>
+  </div>
+  <hr>
+  <div>
+    <h3>2. On Init</h3>
+    <app-ng-on-init></app-ng-on-init>
+  </div>
+</div>
