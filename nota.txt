@@ -1,0 +1,111 @@
+s# Creando un Componente
+ng generate component contador
+ng g c contador
+
+ng g c components/title
+
+
+# Creando Servicios
+ng generate service message
+
+# Creando un Modulo
+ng g m appRouting
+ng g m appRouting --flat
+ng g m blog --routing
+
+ng g c courses/ListCourses
+
+Ciclo de vida de un Componente
+------------------------------------------
+1. Constructor
+2. ngOnChanges
+3. ngOnInit
+4. ngDoCheck
+5. ngAfterContentInit
+6. ngAfterContentChecked
+7. ngAfterViewInit
+8. ngAfterViewChecked
+9. ngOnDestroy
+
+
+a. ngOnChanges() -> se ejecuta cuando hay cambio en el Input o Ouput
+b. ngOnInit() -> Se invoca una sola vez
+c. ngOnDestroy() => 
+
+
+ng serve --port 3000
+
+-----------------------------------------------------------------------------------------
+
+Ciclo de vida de un Componente
+---------------------------------------------------
+A. Nace
+    . Inicializar valores
+    . Llamar endpoints
+B. Cambia
+    . Loginca de negocio
+    . Modifica valores
+    . Renderizar valores y sus cambios
+C. Muere
+    . Terminar cualquier conexion
+    . Liberar memoria
+
+Directivas
+---------------------------------------------
+Las directivas extienden funcionalidades del DOM
+<div *ngIf="true">
+    ¡Me ven!
+</div>
+
+tipos
+--------
+A. Estructuras => modifica el html
+    * ngIf
+    * ngFor
+    * ngSwitch
+B. Entrada
+    [] <input [ngModel] = "prop" /> 
+C. Evento
+    () <button (ngClick)="metodo()" />
+D. Dual binding
+    [()] => se utiliza tanto para entrada como salida (Entrada y evento)
+
+prop = true;
+
+<div *ngIf="prop">
+    ¡Me Ven!
+</div>
+
+items = [
+    { name: "Kendra" },
+    { name: "Meryem" },
+];
+
+<div *ngFor="let item of items">
+    { item.name }
+</div>
+
+[ngStyle] = Aplica estilos de manera condicionals
+
+<span [ngStyle] = "{
+    background: valido ? 'green' : 'red'
+}
+>
+    ¿De que color sere?
+</span>
+
+
+
+
+Tasks
+---------------------------------------
+ciclo de vida
+plantillas
+servicios
+
+Firebase Angular
+--------------------------------
+ng add @angular/fire
+
+
+ng g component people-table --standalone (que no modifique ningo modulo)
