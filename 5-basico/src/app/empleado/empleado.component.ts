@@ -13,6 +13,9 @@ export class EmpleadoComponent {
   private codigo = 283284847;
   isActivInput = true;
   isLogged = false;
+  isRegisted = false;
+  universidad: String = 'UTP';
+  carreras: String = 'Ing. Informatica';
 
   getCodigo() {
     return this.codigo;
@@ -20,6 +23,28 @@ export class EmpleadoComponent {
 
   getRegisterUser() {
     this.isLogged = !this.isLogged;
+  }
+
+  setUserRegister() {
+    alert('El usuario se acaba de registrar');
+  }
+
+  login(event: Event) {
+    this.isRegisted = true;
+
+    // if ((<HTMLInputElement>event.target).value === 'Si') {
+    //   this.isRegisted = true
+    // } else {
+    //   this.isRegisted = false;
+    // }
+  }
+
+  logout() {
+    this.isRegisted = false;
+  }
+
+  changeUniversity(event: Event) {
+    this.universidad = (<HTMLInputElement>event.target).value;
   }
 
   // handleClick(value: String) {

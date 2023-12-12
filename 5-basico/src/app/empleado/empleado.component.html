@@ -19,4 +19,26 @@
             {{isLogged? 'Logout' : 'Login'}}
         </button>
     </div>
+    <div>
+        <p class="text-lg font-thin">
+            Registrado 2: <input type="checkbox" (click)="setUserRegister()">
+        </p>
+    </div>
+    <div>
+        <p>{{isRegisted? 'El usuario acaba de registrar' : 'No hay nadie registrado'}}</p>
+        <p class="text-lg font-thin">
+            Registrado: <input type="radio" name="registrado" value="Si" (click)="login($event)">
+        </p>
+        <p class="text-lg font-thin">
+            No Registrado: <input type="radio" name="registrado" value="No" (click)="logout()">
+        </p>
+    </div>
+    <div>
+        <p>Universidad: {{universidad}}</p>
+        <input type="text" placeholder="Name University" (input)="changeUniversity($event)">
+    </div>
+    <div>
+        <p>Carreras: {{carreras}}</p>
+        <input type="text" placeholder="Carreras" [(ngModel)]="carreras">
+    </div>
 </div>
