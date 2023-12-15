@@ -1,0 +1,20 @@
+<div>
+  <p>{{title}}</p>
+  <form>
+    <div>
+      <label for="">Number 1</label>
+      <input type="number" [(ngModel)]="number1" name="number1">
+    </div>
+    <div>
+      <label for="">Number 2</label>
+      <input type="number" [(ngModel)]="number2" name="number2">
+    </div>
+    <div>
+      <button type="submit" (click)="sumar()">Sumar</button>
+      <button type="submit" (click)="restar()">Restar</button>
+    </div>
+
+  </form>
+
+  <p>Resultado: {{result}}</p>
+</div>
