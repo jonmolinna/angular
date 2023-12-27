@@ -1,0 +1,32 @@
+<div class="space-y-5 mt-4">
+    <div class="flex justify-center">
+        <form class="space-x-2" [formGroup]="initialForm" (ngSubmit)="handleSubmit()">
+            <input type="number" class="border border-gray-500 p-1 rounded-md" formControlName="number">
+            <button type="submit" class="bg-pink-700 py-1 px-2 text-white rounded-md">
+                Enviar
+            </button>
+        </form>
+    </div>
+    <div class="grid grid-cols-2 gap-8">
+        <div>
+            <h4>A. ngStyle</h4>
+            <div>
+                <ul>
+                    <li *ngFor="let number of numbers">
+                        {{number}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <h4>B. ngClass</h4>
+            <div>
+                <ul>
+                    <li *ngFor="let number of numbers">
+                        {{ number}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
