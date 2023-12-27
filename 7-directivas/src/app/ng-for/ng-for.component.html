@@ -1,0 +1,36 @@
+<div>
+    <h3>B. Directiva ngFor</h3>
+    <div class="grid grid-cols-4 gap-3">
+        <div *ngFor="let language of data; let i = index"
+            class="bg-gray-200 borde border-gray-400 rounded-md p-3 shadow-md">
+            <h5 class="text-center">
+                {{language.title}}
+            </h5>
+            <p>{{language.description}}</p>
+            <p class="text-center font-bold">{{i + 1}}</p>
+        </div>
+    </div>
+    <div class="mt-10">
+        <div class="flex justify-center">
+            <form [formGroup]="initialForm" (ngSubmit)="handleSubmit()"
+                class="flex flex-col space-y-5 p-5 bg-gray-200 w-72 border border-gray-400 rounded-md shadow-md">
+                <input type="text" formControlName="name" placeholder="Nombre"
+                    class="p-1 rounded-md border border-gray-600">
+                <input type="text" formControlName="surname" placeholder=" Apellido"
+                    class="p-1 rounded-md border border-gray-600">
+                <input type="text" formControlName="cargo" placeholder="Cargo"
+                    class="p-1 rounded-md border border-gray-600">
+                <input type="text" formControlName="salary" placeholder="Salary"
+                    class="p-1 rounded-md border border-gray-600">
+                <button class="p-1 bg-pink-700 text-white rounded-md">Enviar</button>
+            </form>
+        </div>
+        <div class="grid grid-cols-3 gap-4 mt-4">
+            <div *ngFor="let employee of employees" class="bg-gray-200 border border-gray-500 rounded-md p-4">
+                <p class="text-center">{{employee.name}} {{employee.surname}}</p>
+                <p>Cargo: {{employee.cargo}}</p>
+                <p>Salario: {{employee.salary}}</p>
+            </div>
+        </div>
+    </div>
+</div>
