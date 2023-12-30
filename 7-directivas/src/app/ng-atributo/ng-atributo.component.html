@@ -12,7 +12,7 @@
             <h4>A. ngStyle</h4>
             <div>
                 <ul>
-                    <li *ngFor="let number of numbers">
+                    <li *ngFor="let number of numbers" [ngStyle]="{color: number > 20 ? 'red' : ''}">
                         {{number}}
                     </li>
                 </ul>
@@ -22,7 +22,7 @@
             <h4>B. ngClass</h4>
             <div>
                 <ul>
-                    <li *ngFor="let number of numbers">
+                    <li *ngFor="let number of numbers" [ngClass]="{btn_number: number > 17}">
                         {{ number}}
                     </li>
                 </ul>
