@@ -12,6 +12,9 @@ import { FormComponent } from './form/form.component';
 
 import { usersService } from './users.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormUpdateComponent } from './form-update/form-update.component';
+import { ShowComponent } from './show/show.component';
+import { ErrorNotFoundComponent } from './error-not-found/error-not-found.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -19,6 +22,9 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'services', component: ServicesComponent },
   { path: 'form', component: FormComponent },
+  { path: 'update/:id', component: FormUpdateComponent },
+  { path: 'show', component: ShowComponent },
+  { path: '**', component: ErrorNotFoundComponent },
 ];
 
 @NgModule({
@@ -30,6 +36,9 @@ const routes: Routes = [
     ServicesComponent,
     ContactComponent,
     FormComponent,
+    FormUpdateComponent,
+    ShowComponent,
+    ErrorNotFoundComponent,
   ],
   imports: [
     BrowserModule,

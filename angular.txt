@@ -1,0 +1,26 @@
+1. Directivas
+------------------------------
+A. Componentes
+    a. Angular
+        - @Component
+        - @Module
+    b. Personalizadas
+        - (Custom)
+
+B. Estructural
+    - ngIf
+    - ngFor
+    - ngSwitch
+    - ngPlural
+    - ngTemplate
+    - ngComponentOutlet
+
+C. Atributo
+    - ngClass
+    - ngStyle
+    - ngModel
+
+2. Componentes
+------------------------------------------
+A. @Input() => De padre a hijo
+B. @Output() => De hijo a padre

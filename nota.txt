@@ -1,4 +1,4 @@
-s# Creando un Componente
+# Creando un Componente
 ng generate component contador
 ng g c contador
 
@@ -63,9 +63,11 @@ A. Estructuras => modifica el html
     * ngIf
     * ngFor
     * ngSwitch
-B. Entrada
+B. Entrada = Property Binding
+    typescript -> template
     [] <input [ngModel] = "prop" /> 
 C. Evento
+    template -> typescript
     () <button (ngClick)="metodo()" />
 D. Dual binding
     [()] => se utiliza tanto para entrada como salida (Entrada y evento)
@@ -94,6 +96,8 @@ items = [
     ¿De que color sere?
 </span>
 
+Para nombrar un elemento DOM => se realiza mediante un #name
+
 
 
 
@@ -111,3 +115,5 @@ ng add @angular/fire
 ng g component people-table --standalone (que no modifique ningo modulo)
 
 Hola Mundo
+
+ng generate service hero

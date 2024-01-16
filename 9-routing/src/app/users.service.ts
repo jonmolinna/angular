@@ -33,4 +33,24 @@ export class usersService {
     const user = { ...userInput, id: this.users.length + 1 };
     this.users.push(user);
   }
+
+  findOneUserById(id: number) {
+    return this.users.find((user) => user.id === id);
+  }
+
+  updateUser(body: userInterface) {
+    const updatedUsers = this.users.map((user) => {
+      if (user.id === body.id) {
+        return { ...body, name: body.name, age: body.age };
+      }
+      return user;
+    });
+
+    this.users = updatedUsers;
+  }
+
+  deleteUser(id: number) {
+    const index = this.users.findIndex((user) => user.id === id);
+    this.users.splice(index, 1);
+  }
 }
