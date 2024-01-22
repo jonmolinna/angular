@@ -9,10 +9,16 @@ const URI =
 export class DataService {
   constructor(private httpClient: HttpClient) {}
 
+  employees: employeeInterface[] = [];
+
   //  subscribe = observable
   addEmployee(employee: employeeInterface) {
     this.httpClient
       .post(URI, employee)
       .subscribe((response) => console.log(response));
+  }
+
+  getAllEmployees() {
+    return this.httpClient.get(URI);
   }
 }
