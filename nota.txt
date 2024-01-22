@@ -114,6 +114,4 @@ ng add @angular/fire
 
 ng g component people-table --standalone (que no modifique ningo modulo)
 
-Hola Mundo
-
 ng generate service hero
