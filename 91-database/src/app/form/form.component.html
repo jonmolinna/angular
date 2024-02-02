@@ -1,0 +1,12 @@
+<div class="flex justify-center mt-10">
+    <form [formGroup]="initialForm" (ngSubmit)="handleSubmit()"
+        class="flex flex-col space-y-2 w-[400px] p-5 bg-gray-50 shadow-md rounded-md">
+        <input type="text" formControlName="name" placeholder="Name"
+            class="py-1 px-2 rounded-md border border-gray-200">
+        <input type="email" formControlName="email" placeholder="Email"
+            class="py-1 px-2 rounded-md border border-gray-200">
+        <input type="text" formControlName="salary" placeholder="Salary"
+            class="py-1 px-2 rounded-md border border-gray-200">
+        <button class="bg-green-700 py-1 px-2 text-white">Guardar</button>
+    </form>
+</div>
