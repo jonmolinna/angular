@@ -27,6 +27,7 @@ export class LoginComponent {
       .login(this.initialForm.value)
       .then((response) => {
         console.log(response);
+        this.router.navigate(['/main']);
       })
       .catch((error) => console.log(error));
   }

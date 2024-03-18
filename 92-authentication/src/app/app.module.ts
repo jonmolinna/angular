@@ -12,6 +12,9 @@ import { environment } from 'src/environments/environment.development';
 import { RegisterComponent } from './register/register.component';
 import { MainComponent } from './main/main.component';
 import { AppRoutingModule } from './app-routing.module';
+import { NavbarComponent } from './navbar/navbar.component';
+import { EmployeesComponent } from './employees/employees.component';
+import { EmployeeComponent } from './employee/employee.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,9 @@ import { AppRoutingModule } from './app-routing.module';
     LoginComponent,
     RegisterComponent,
     MainComponent,
+    NavbarComponent,
+    EmployeesComponent,
+    EmployeeComponent,
   ],
   imports: [
     BrowserModule,
