@@ -16,6 +16,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { EmployeesComponent } from './employees/employees.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { FormComponent } from './form/form.component';
+import { ContactComponent } from './contact/contact.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { FormComponent } from './form/form.component';
     EmployeesComponent,
     EmployeeComponent,
     FormComponent,
+    ContactComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

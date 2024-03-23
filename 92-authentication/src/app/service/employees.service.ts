@@ -2,13 +2,7 @@ import { Injectable } from '@angular/core';
 import { Firestore, collectionData } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { EmployeeInterface } from '../employee.interface';
-import {
-  addDoc,
-  collection,
-  deleteDoc,
-  doc,
-  updateDoc,
-} from 'firebase/firestore';
+import { addDoc, collection, deleteDoc, doc } from 'firebase/firestore';
 
 @Injectable({
   providedIn: 'root',

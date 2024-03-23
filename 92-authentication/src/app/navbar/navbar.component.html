@@ -1,17 +1,13 @@
 <nav class="flex items-center mt-5 space-x-2 justify-center">
     <div>
-        <a href="#" class="text-lg text-gray-700">Home</a>
+        <a routerLink="/home" class="text-lg text-gray-700">Home</a>
     </div>
     <span class="block text-gray-400">|</span>
     <div>
-        <a href="#" class="text-lg text-gray-700">Services</a>
+        <a routerLink="/contact" class="text-lg text-gray-700">Contact</a>
     </div>
     <span class="block text-gray-400">|</span>
     <div>
-        <a href="#" class="text-lg text-gray-700">Contact</a>
-    </div>
-    <span class="block text-gray-400">|</span>
-    <div>
-        <a href="#" class="text-lg text-gray-700">Logout</a>
+        <button class="text-lg text-gray-700" (click)="handleLogout()">Logout</button>
     </div>
 </nav>
