@@ -1,0 +1,13 @@
+<div>
+    <h3>Contador: {{ numero }}</h3>
+    <button (click)="decrementar()">Decrementar</button>
+    <button (click)="incrementar()">Incrementar</button>
+    <br>
+    <app-child [message]="message" (messageHijo)="recibirMessage($event)" (incrementarNumero)="incrementar()"
+        (decrementarNumero)="decrementar()" />
+    <br>
+    <div>
+        <h3>El mensaje recibido desde el hijo es:</h3>
+        <p>{{ recibeMessage }}</p>
+    </div>
+</div>

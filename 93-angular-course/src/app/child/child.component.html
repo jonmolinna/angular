@@ -1,0 +1,13 @@
+<div>
+    <button (click)="restNumber()">Restar</button>
+    <button (click)="addNumber()">Aumentar</button>
+</div>
+<br>
+<div>
+    <h3>Mensaje recibido desde el padre</h3>
+    <p>{{ message }}</p>
+    <br>
+    <label for="entrada">Escribe un mensaje para el padre: </label>
+    <input type="text" id="entrada" [(ngModel)]="mensaje">
+    <button type="button" (click)="enviarMessage()">Enviar</button>
+</div>

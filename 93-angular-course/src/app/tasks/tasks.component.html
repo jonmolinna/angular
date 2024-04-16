@@ -1,0 +1,39 @@
+<div>
+    <h3>Agregar una Tarea</h3>
+    <form [formGroup]="initialForm" (ngSubmit)="handleSubmit()">
+        <input type="text" placeholder="Task" formControlName="task" autofocus>
+        <br>
+        <input type="text" placeholder="Description" formControlName="description">
+        <br>
+        <button>Save</button>
+    </form>
+    <br><br>
+    <table>
+        <thead>
+            <th>#</th>
+            <th>Task</th>
+            <th>Description</th>
+            <th>Actions</th>
+        </thead>
+        <tbody>
+            <ng-template [ngIf]="tasks.length < 1" [ngIfElse]="data">
+                <tr>
+                    <td colspan="4">
+                        No tienes tareas
+                    </td>
+                </tr>
+            </ng-template>
+            <ng-template #data>
+                <tr *ngFor="let task of tasks; index as i">
+                    <td>{{ i + 1 }}</td>
+                    <td>{{ task.task }}</td>
+                    <td>{{ task.description }}</td>
+                    <td>
+                        <button (click)="deleteTaskById(task.id)">Delete</button>
+                        <button>Edit</button>
+                    </td>
+                </tr>
+            </ng-template>
+        </tbody>
+    </table>
+</div>
