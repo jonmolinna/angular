@@ -1,1 +1,18 @@
-2_34_57
+Las directivas
+--------------------------------
+Permiten hacer muchas cosas con la aplicacion, uno de ellas es verificar si el usuario tiene permiso
+
+ng generate directive name-directive
+
+Pipes - Filtros
+--------------------------------
+Son una caracteristicas que permite formatear y transformar datos
+en la vista de una aplocación web, Los pipes son funciones que toman un valor
+de entrada (cadena - numero - objeto) y lo procesan para proporcionar una representacion
+formateada en la interfaz del usuario.
+Los pipes no modifican los datos originales.
+
+ng generate pipe name-pipe
+
+
+2-52-57

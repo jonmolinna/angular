@@ -5,7 +5,7 @@
         <br>
         <input type="text" placeholder="Description" formControlName="description">
         <br>
-        <button>Save</button>
+        <button appStyleBtn>Save</button>
     </form>
     <br><br>
     <table>
@@ -13,6 +13,7 @@
             <th>#</th>
             <th>Task</th>
             <th>Description</th>
+            <th>Fecha</th>
             <th>Actions</th>
         </thead>
         <tbody>
@@ -26,11 +27,12 @@
             <ng-template #data>
                 <tr *ngFor="let task of tasks; index as i">
                     <td>{{ i + 1 }}</td>
-                    <td>{{ task.task }}</td>
-                    <td>{{ task.description }}</td>
+                    <td>{{ task.task | pipeCustom}}</td>
+                    <td>{{ task.description | pipeCustom }}</td>
+                    <td>{{ task.id | date: 'YYYY/MM/dd'}}</td>
                     <td>
                         <button (click)="deleteTaskById(task.id)">Delete</button>
-                        <button>Edit</button>
+                        <button (click)="getOneTaskById(task.id)">Edit</button>
                     </td>
                 </tr>
             </ng-template>

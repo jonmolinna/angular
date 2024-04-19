@@ -9,6 +9,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContadorComponent } from './contador/contador.component';
 import { ContadorService } from './contador.service';
 import { TasksComponent } from './tasks/tasks.component';
+import { StyleBtnDirective } from './style-btn.directive';
+import { PipeCustomPipe } from './pipe-custom.pipe';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { TasksComponent } from './tasks/tasks.component';
     ChildComponent,
     ContadorComponent,
     TasksComponent,
+    StyleBtnDirective,
+    PipeCustomPipe,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [ContadorService],
