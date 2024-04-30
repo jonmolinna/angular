@@ -31,12 +31,52 @@
                 <input [ngClass]="{'is_invalid_input': hasErrors('name', 'required') || hasErrors('name', 'minlength')}"
                     type="text" id="name" formControlName="name"
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                    placeholder="name@flowbite.com" />
+                    placeholder="Kendra" />
                 <p class="mt-2 text-sm text-red-600" *ngIf="hasErrors('name', 'required')">
                     Nombre Requerido
                 </p>
                 <p class="mt-2 text-sm text-red-600" *ngIf="hasErrors('name', 'minlength')">
                     Nombre requiere minimo 3 caracteres
+                </p>
+            </div>
+            <div class="mb-5">
+                <label for="surname" class="block mb-2 text-sm font-medium text-gray-900">Your Surname</label>
+                <input
+                    [ngClass]="{'is_invalid_input': hasErrors('surname', 'required') || hasErrors('surname', 'minlength')}"
+                    type="text" id="surname" formControlName="surname"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                    placeholder="Contreras" />
+                <p class="mt-2 text-sm text-red-600" *ngIf="hasErrors('surname', 'required')">
+                    Apellido Requerido
+                </p>
+                <p class="mt-2 text-sm text-red-600" *ngIf="hasErrors('surname', 'minlength')">
+                    Apellido requiere minimo 3 caracteres
+                </p>
+            </div>
+            <div class="mb-5">
+                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900">
+                    Selecciona un documento
+                </label>
+                <select id="countries" formControlName="typeDni"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                    <option value="DNI">DNI</option>
+                    <option value="Pasaporte">Pasaporte</option>
+                    <option value="Cedula">Cedula</option>
+                </select>
+            </div>
+            <div class="mb-5">
+                <label for="dni" class="block mb-2 text-sm font-medium text-gray-900">
+                    {{typeDni}}
+                </label>
+                <input [ngClass]="{'is_invalid_input': hasErrors('dni', 'required') || hasErrors('dni', 'minlength')}"
+                    type="text" id="dni" formControlName="dni"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                    placeholder="12934895" />
+                <p class="mt-2 text-sm text-red-600" *ngIf="hasErrors('dni', 'required')">
+                    {{typeDni}} Requerido
+                </p>
+                <p class="mt-2 text-sm text-red-600" *ngIf="hasErrors('dni', 'minlength')">
+                    {{typeDni}} requiere minimo 3 caracteres
                 </p>
             </div>
             <div class="mb-5">
