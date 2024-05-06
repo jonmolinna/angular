@@ -1,0 +1,66 @@
+<div class="max-w-4xl mx-auto mt-9">
+    <h2 class="text-center mb-4 text-lg">Formulario de tipo Reactivo</h2>
+    <div>
+        <form class="max-w-sm mx-auto" [formGroup]="initialForm" (ngSubmit)="handleSubmit()">
+            <div class="mb-5">
+                <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Your Name</label>
+                <input [ngClass]="{'is_invalid_input': hasErrors('name', 'required') || hasErrors('name', 'minlength')}"
+                    type="text" id="name" formControlName="name"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                    placeholder="Kendra" />
+                <p class="mt-2 text-sm text-red-600" *ngIf="hasErrors('name', 'required')">
+                    Nombre Requerido
+                </p>
+                <p class="mt-2 text-sm text-red-600" *ngIf="hasErrors('name', 'minlength')">
+                    Nombre requiere minimo 3 caracteres
+                </p>
+            </div>
+            <div class="mb-5">
+                <label for="surname" class="block mb-2 text-sm font-medium text-gray-900">Your Surname</label>
+                <input
+                    [ngClass]="{'is_invalid_input': hasErrors('surname', 'required') || hasErrors('surname', 'minlength')}"
+                    type="text" id="surname" formControlName="surname"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                    placeholder="Contreras" />
+                <p class="mt-2 text-sm text-red-600" *ngIf="hasErrors('surname', 'required')">
+                    Apellido Requerido
+                </p>
+                <p class="mt-2 text-sm text-red-600" *ngIf="hasErrors('surname', 'minlength')">
+                    Apellido requiere minimo 3 caracteres
+                </p>
+            </div>
+            <div class="mb-5">
+                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900">
+                    Selecciona un documento
+                </label>
+                <select id="countries" formControlName="typesDni"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                    <option value="DNI">DNI</option>
+                    <option value="Pasaporte">Pasaporte</option>
+                    <option value="Cedula">Cedula</option>
+                </select>
+            </div>
+            <div class="mb-5" *ngIf="mostrarDni">
+                <dni-input [typeDni]="typeDni" />
+            </div>
+            <div class="mb-5">
+                <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Your email</label>
+                <input [ngClass]="{'is_invalid_input': hasErrors('email', 'email') || hasErrors('email', 'required')}"
+                    type="email" id="email" formControlName="email"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                    placeholder="Kendra Contreras" />
+                <p class="mt-2 text-sm text-red-600" *ngIf="hasErrors('email', 'email')">
+                    Email invalido
+                </p>
+                <p class="mt-2 text-sm text-red-600" *ngIf="hasErrors('email', 'required')">
+                    Email Requerido
+                </p>
+            </div>
+            <button type="submit"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">
+                Enviar
+            </button>
+        </form>
+    </div>
+    <br><br><br>
+</div>
