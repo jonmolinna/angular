@@ -1,5 +1,5 @@
-Ciclo de Vida de un Componente
-------------------------------------------
+## Ciclo de Vida de un Componente
+
 1. ngOnChanges: Se dispara cuando los datos de entrada (@Input) del componente cambian.
 2. ngOnInit: Ocurre despues de que angular ha iniciado todas las propiedades del componente.
 3. ngDoCheck: Se ejecuta durante cada deteccion de cambios u permite realizar acciones de verificacion personalizadas.
@@ -9,5 +9,8 @@ Ciclo de Vida de un Componente
 7. ngAfterViewChecked: Se ejecuta despues de cada verificacion de las vistas del componente.
 8. ngOnDestroy: Se dispara justo antes de que angular destruya el componente.
 
+## Interfaces rapido
 
-4-58-53
+https://quicktype.io/
+
+5-36-38

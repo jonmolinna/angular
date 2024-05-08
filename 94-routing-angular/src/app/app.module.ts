@@ -10,6 +10,9 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CicleLifeComponent } from './cicle-life/cicle-life.component';
 import { DniComponent } from './cicle-life/dni/dni.component';
+import { ProductsApiComponent } from './products-api/products-api.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ProductsApiDetailComponent } from './products-api-detail/products-api-detail.component';
 
 @NgModule({
   declarations: [
@@ -20,8 +23,16 @@ import { DniComponent } from './cicle-life/dni/dni.component';
     ProductDetailComponent,
     CicleLifeComponent,
     DniComponent,
+    ProductsApiComponent,
+    ProductsApiDetailComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
