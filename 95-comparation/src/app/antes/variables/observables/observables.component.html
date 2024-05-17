@@ -1,0 +1,20 @@
+<div>
+    <h3 class="text-xl font-bold">Variables Observables</h3>
+    <div>
+        <p>Numero 1: <span class="font-bold">{{ numberOne }}</span></p>
+        <p>Numero 2: <span class="font-bold">{{ numberTwo }}</span></p>
+        <p>Numero 1 + Numero 2: <span class="font-bold">{{ sumNumber }}</span></p>
+        <p>Nombre: <span class="font-bold">{{ nombreModificado }}</span></p>
+        <div class="mt-4 space-x-4">
+            <button (click)="cambiarNumeroOne(5)" class="bg-pink-700 px-2 py-1 rounded-md text-white">
+                Cambiar Numero 1
+            </button>
+            <button (click)="cambiarNumeroTwo(10)" class="bg-pink-700 px-2 py-1 rounded-md text-white">
+                Cambiar Numero 2
+            </button>
+            <button (click)="cambiarNombre('Malina Tanase')" class="bg-pink-700 px-2 py-1 rounded-md text-white">
+                Cambiar Nombre
+            </button>
+        </div>
+    </div>
+</div>
