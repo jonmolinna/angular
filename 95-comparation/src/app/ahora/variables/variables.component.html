@@ -1,3 +1,20 @@
-<div class="max-w-screen-lg mx-auto">
-    <p>Hola Mundo</p>
+<div class="max-w-screen-md mx-auto mt-8">
+    <h3 class="text-xl font-bold">Manejo de Variables</h3>
+    <div>
+        <p>Numero 1: <span class="font-bold">{{ numero1() }}</span></p>
+        <p>Numero 2: <span class="font-bold">{{ numero2() }}</span></p>
+        <p>Numero 1 + Numero 2: <span class="font-bold">{{ sumaNumero() }}</span></p>
+        <p>Nombres: <span class="font-bold">{{ names() }}</span></p>
+        <div class="mt-4 space-x-4">
+            <button (click)="setNumero1(5)" class="bg-pink-700 px-2 py-1 rounded-md text-white">
+                Cambiar Numero 1
+            </button>
+            <button (click)="setNumero2(10)" class="bg-pink-700 px-2 py-1 rounded-md text-white">
+                Cambiar Numero 2
+            </button>
+            <button (click)="setNombre('Melek')" class="bg-pink-700 px-2 py-1 rounded-md text-white">
+                Cambiar Nombre
+            </button>
+        </div>
+    </div>
 </div>
