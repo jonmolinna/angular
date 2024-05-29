@@ -1,4 +1,11 @@
-import { Component, OnInit, computed, effect, signal } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  computed,
+  effect,
+  numberAttribute,
+  signal,
+} from '@angular/core';
 import cartInterface from 'src/app/interface/cart.interface';
 import productInterface from 'src/app/interface/product.iterface';
 import productData from 'src/app/data/product.data';
@@ -76,6 +83,17 @@ export class VariablesComponent implements OnInit {
           ? { ...item, quantity: item.quantity < 2 ? 1 : item.quantity - 1 }
           : item
       )
+    );
+  }
+
+  get quantityProducts(): number {
+    return this.cart().reduce((number, obj) => number + obj.quantity, 0);
+  }
+
+  get quantityPrice(): number {
+    return this.cart().reduce(
+      (price, obj) => price + obj.price * obj.quantity,
+      0
     );
   }
 }
