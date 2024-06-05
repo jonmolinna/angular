@@ -1,0 +1,28 @@
+<div>
+    <table class="w-full text-sm text-left text-gray-500 rtl:text-right">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+            <tr>
+                <th class="px-6 py-3">Name</th>
+                <th class="px-6 py-3">Position</th>
+                <th class="px-6 py-3">Weight</th>
+                <th class="px-6 py-3">Symbol</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of data">
+                <td class="px-6 py-4">
+                    {{ item.name }}
+                </td>
+                <td class="px-6 py-4">
+                    {{ item.position }}
+                </td>
+                <td class="px-6 py-4">
+                    {{ item.weight }}
+                </td>
+                <td class="px-6 py-4">
+                    {{ item.symbol }}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

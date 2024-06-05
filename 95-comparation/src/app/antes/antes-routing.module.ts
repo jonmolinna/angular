@@ -3,6 +3,7 @@ import { VariablesComponent } from './variables/variables.component';
 import { NgModule } from '@angular/core';
 import { HomeComponent } from './home/home.component';
 import { TagsComponent } from './tags/tags.component';
+import { InputsComponent } from './inputs/inputs.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
       {
         path: 'tags',
         component: TagsComponent,
+      },
+      {
+        path: 'inputs',
+        component: InputsComponent,
       },
     ],
   },
