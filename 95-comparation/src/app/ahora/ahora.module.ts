@@ -11,9 +11,27 @@ import { ChildComponent } from './inputs/child/child.component';
 import { CondicionalComponent } from './inputs/condicional/condicional.component';
 import { RequiredComponent } from './inputs/required/required.component';
 import { TransformComponent } from './inputs/transform/transform.component';
+import { ExampleComponent } from './inputs/example/example.component';
+import { ProductsComponent } from './inputs/example/products/products.component';
+import { CartComponent } from './inputs/example/cart/cart.component';
+import { CartListComponent } from './inputs/example/cart-list/cart-list.component';
 
 @NgModule({
-  declarations: [VariablesComponent, HomeComponent, TagsComponent, HijoComponent, InputsComponent, ChildComponent, CondicionalComponent, RequiredComponent, TransformComponent],
+  declarations: [
+    VariablesComponent,
+    HomeComponent,
+    TagsComponent,
+    HijoComponent,
+    InputsComponent,
+    ChildComponent,
+    CondicionalComponent,
+    RequiredComponent,
+    TransformComponent,
+    ExampleComponent,
+    ProductsComponent,
+    CartComponent,
+    CartListComponent,
+  ],
   imports: [CommonModule, AhoraRoutingModule, FormsModule],
 })
 export class AhoraModule {}

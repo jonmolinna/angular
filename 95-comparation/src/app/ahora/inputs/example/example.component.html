@@ -1,0 +1,7 @@
+<div>
+    <app-products [products]="products" (newCartEvent)="addCart($event)" />
+    <br><br>
+    <app-cart [quantityProduct]="quantityProduct()" [priceTotalCart]="priceTotalCart()" />
+    <app-cart-list [carts]="carts" (addQuantityEvent)="addQuantityCart($event)"
+        (restQuantityEvent)="restQuantityCart($event)" (deleteCartEvent)="deleteCart($event)" />
+</div>

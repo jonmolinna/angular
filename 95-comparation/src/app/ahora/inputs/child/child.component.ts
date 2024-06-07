@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { elementsInterface } from '../element.interface';
 
 @Component({
   selector: 'app-child',
   templateUrl: './child.component.html',
-  styleUrls: ['./child.component.css']
 })
 export class ChildComponent {
-
+  @Input({ required: true }) data: elementsInterface[] = [];
 }
