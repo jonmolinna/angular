@@ -15,6 +15,7 @@ import { ExampleComponent } from './inputs/example/example.component';
 import { ProductsComponent } from './inputs/example/products/products.component';
 import { CartComponent } from './inputs/example/cart/cart.component';
 import { CartListComponent } from './inputs/example/cart-list/cart-list.component';
+import { DependenciasComponent } from './dependencias/dependencias.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { CartListComponent } from './inputs/example/cart-list/cart-list.componen
     ProductsComponent,
     CartComponent,
     CartListComponent,
+    DependenciasComponent,
   ],
   imports: [CommonModule, AhoraRoutingModule, FormsModule],
 })

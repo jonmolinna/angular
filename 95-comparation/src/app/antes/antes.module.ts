@@ -10,9 +10,20 @@ import { TagsComponent } from './tags/tags.component';
 import { HijoComponent } from './tags/hijo/hijo.component';
 import { InputsComponent } from './inputs/inputs.component';
 import { ChildComponent } from './inputs/child/child.component';
+import { DependenciasComponent } from './dependencias/dependencias.component';
 
 @NgModule({
-  declarations: [VariablesComponent, HomeComponent, SimpleComponent, ObservablesComponent, TagsComponent, HijoComponent, InputsComponent, ChildComponent],
+  declarations: [
+    VariablesComponent,
+    HomeComponent,
+    SimpleComponent,
+    ObservablesComponent,
+    TagsComponent,
+    HijoComponent,
+    InputsComponent,
+    ChildComponent,
+    DependenciasComponent,
+  ],
   imports: [CommonModule, AntesRoutingModule, FormsModule],
 })
 export class AntesModule {}
