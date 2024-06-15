@@ -16,6 +16,10 @@ import { ProductsComponent } from './inputs/example/products/products.component'
 import { CartComponent } from './inputs/example/cart/cart.component';
 import { CartListComponent } from './inputs/example/cart-list/cart-list.component';
 import { DependenciasComponent } from './dependencias/dependencias.component';
+import { ExamplesComponent } from './dependencias/examples/examples.component';
+import { ProductsListComponent } from './dependencias/examples/products-list/products-list.component';
+import { ShoppingComponent } from './dependencias/examples/shopping/shopping.component';
+import { ShoppingListsComponent } from './dependencias/examples/shopping-lists/shopping-lists.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +37,10 @@ import { DependenciasComponent } from './dependencias/dependencias.component';
     CartComponent,
     CartListComponent,
     DependenciasComponent,
+    ExamplesComponent,
+    ProductsListComponent,
+    ShoppingComponent,
+    ShoppingListsComponent,
   ],
   imports: [CommonModule, AhoraRoutingModule, FormsModule],
 })

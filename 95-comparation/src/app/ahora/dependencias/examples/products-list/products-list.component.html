@@ -1,0 +1,21 @@
+<div class="grid grid-cols-2 gap-2">
+    <div *ngFor="let product of products" class="p-3 border border-gray-200 rounded-md shadow">
+        <p class="text-center text-pink-700 font-bold">
+            {{ product.name}}
+        </p>
+        <p class="text-gray-700">
+            {{ product.description}}
+        </p>
+        <div class="flex justify-between items-center">
+            <span class="text-gray-700 font-medium">{{ product.category}}</span>
+            <span class="text-pink-700 font-medium">
+                {{ product.price | currency: 'S/ '}}
+            </span>
+        </div>
+        <div class="mt-3 flex justify-end">
+            <button (click)="addProductToCart(product)" class="bg-pink-700 py-1 px-2 text-white rounded-md">
+                Add
+            </button>
+        </div>
+    </div>
+</div>
