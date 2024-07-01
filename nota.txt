@@ -115,3 +115,70 @@ ng add @angular/fire
 ng g component people-table --standalone (que no modifique ningo modulo)
 
 ng generate service hero
+
+npm install --save firebase --allow-dirty --force
+
+npm install ngx-cookie-service
+
+------------------------------------------
+Los providers sirven para registrar los Guards, etc
+
+
+Programacion Reactiva
+--------------------------------------------------------
+La programacion reactiva es programacion orientado al manejo de streams de datos
+asincronos y la propagacion de los cambios.
+
+Que es RxJs
+---------------------------------------------------
+Es una libreria  para componer programas asincronas y basados en eventos usando secuencias observables,
+RxJs nos permite hacer programacion reactiva. No es una libreria especifica para angular,
+Podemos usar esta libreria en otras tecnologias.
+
+Stream de datos
+--------------------------------
+Son colecciones o secuencia de eventos continuos ordenados en el tiempo.
+
+Quienes producen un Stream de datos
+-----------------------------------------------
+- Eventos de la ui => click, submit, etc
+- Http Request
+- Web Sockets
+- Estado de una app
+
+Los Stream de datos son:
+---------------------------------------------------------
+1. Observable
+2. Observadores
+3. Suscripciones
+
+RxJs - JavaScript
+------------------------------------------------------------
+1. Observables -> es un stream de datos, un observable unicia cuando alguien se suscribe,
+2. Operators
+3. Subscription
+4. Subjects
+
+Subject
+-------------------------------------------------
+Subject tiene el mismo comportamiento que un Observable, pero este puede compartir data con varios
+Observadores u Observers. Puede ser un Observable y un Observador
+
+1. Subject
+2. Behavior Subject
+3. Replay Subject
+4. Async Subject
+
+Promise VS Observable
+----------------------------------------------------
+1. Se ejecuta inmediatamente            1. No comienza hasta la suscripcion
+2. Emite un solo valor                  2. Emite multiples valores a lo largo del tiempo.
+3. Envia los errores a a promesa hija   3. Los observable proporciona operadores (map, son como 300 oper)
+4. Usa clausa .then()                   4. es importante desuscripciones
+
+--> Observables donde no es necesario desuscribirte, http. Api, en las observables de las rutas.
+
+
+Actualizando Angular
+----------------------------------------------------
+npm install -g @angular/cli
