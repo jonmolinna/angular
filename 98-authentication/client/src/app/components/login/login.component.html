@@ -2,13 +2,13 @@
     <div class="body">
         <div class="card">
             <div class="card-body">
-                <form>
+                <form [formGroup]="initialForm" (submit)="handleSubmit($event)">
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" placeholder="Username">
+                        <input type="text" formControlName="username" class="form-control" placeholder="Username">
                         <label>Username</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="password" class="form-control" placeholder="Password">
+                        <input type="password" formControlName="password" class="form-control" placeholder="Password">
                         <label>Password</label>
                     </div>
                     <div class="d-grid">
@@ -17,7 +17,6 @@
                 </form>
                 <p class="mt-3 text-center">¿No tienes cuenta? <a routerLink="/signIn">Registrar</a></p>
             </div>
-
         </div>
     </div>
 </div>
