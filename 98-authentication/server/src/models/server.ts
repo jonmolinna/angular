@@ -1,4 +1,5 @@
 import express, { Application } from "express";
+import cors from "cors";
 import routesProduct from "../routers/product.routers";
 import routesUser from "../routers/user.routers";
 import sequelize from "../db/connection";
@@ -17,6 +18,7 @@ class Server {
 
   midlewares() {
     this.app.use(express.json());
+    this.app.use(cors());
   }
 
   routes() {
