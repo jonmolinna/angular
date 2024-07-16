@@ -5,21 +5,24 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { userInterface } from '../../interfaces/user.interface';
 import { UserService } from '../../services/user.service';
+import { HttpErrorResponse } from '@angular/common/http';
+import { SpinnerComponent } from '../../shared/spinner/spinner.component';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [RouterLink, ReactiveFormsModule],
+  imports: [RouterLink, ReactiveFormsModule, SpinnerComponent],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
 })
 export class LoginComponent {
   private toastr = inject(ToastrService);
   private userService = inject(UserService);
+  private router = inject(Router);
 
   initialForm: FormGroup;
   loading: boolean = false;
@@ -49,13 +52,22 @@ export class LoginComponent {
       password: password?.value,
     };
 
-    console.log('YOOOO login', user);
-
     this.loading = true;
 
     this.userService.login(user).subscribe({
-      next: (data) => {
-        console.log('yoooo', data);
+      next: (data: any) => {
+        this.loading = false;
+        localStorage.setItem('ang-token', data.token);
+        this.router.navigate(['/dashboard']);
+      },
+      error: (error: HttpErrorResponse) => {
+        this.loading = false;
+
+        if (error.error.message) {
+          this.toastr.error(error.error.message, 'Error');
+        } else {
+          this.toastr.error('Ocurrio un error', 'Error');
+        }
       },
     });
   }

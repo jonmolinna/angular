@@ -1,4 +1,10 @@
 <div class="wrapper">
+    @if (loading) {
+    <div class="container mt-5 text-center">
+        <app-spinner />
+    </div>
+    }
+    @else {
     <div class="body">
         <div class="card">
             <div class="card-body">
@@ -19,4 +25,5 @@
             </div>
         </div>
     </div>
+    }
 </div>
