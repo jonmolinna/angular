@@ -1,0 +1,8 @@
+Initial Typescript
+-----------------------------
+npx tsc --init
+
+npx nodemon dist/index.js
+npx tsc --watch
+
+3-19-38
